@@ -1,0 +1,4 @@
+Healthcare systems use digital portals to manage patient appointments.
+Patients can register online and select available appointment slots.
+Hospitals maintain electronic health records to organize patient information.
+Doctors review medical histories before providing treatment.
