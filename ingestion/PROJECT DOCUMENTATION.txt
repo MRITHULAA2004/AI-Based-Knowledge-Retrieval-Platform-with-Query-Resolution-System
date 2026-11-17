@@ -1,0 +1,156 @@
+Project Name: Development of AI-Based Knowledge Retrieval Platform with Query Resolution 
+
+Milestone 1:
+1.Study RAG architecture, multi-agent query resolution patterns, and Web Speech API integration.
+2.Design system architecture, agent roles, orchestration flow, and data models.
+3.Develop Knowledge Base Ingestion Module — support PDF, DOCX, TXT, and CSV uploads with chunking, embedding generation, and vector store indexing.
+4.Validate RAG pipeline retrieval accuracy using sample knowledge base documents across two different domains.
+
+Submit your Github Repository link, System Architecture and Tech Stack.
+
+Milestone 1 Breakdown - Foundation & Knowledge Retrieval
+
+M1.1 — Research & Technical Understanding
+Study RAG architecture and end-to-end retrieval pipelines.
+Understand multi-agent query resolution patterns and agent orchestration.
+Study semantic similarity, embeddings, chunking strategies, and vector search.
+Study Web Speech API for speech-to-text and text-to-speech integration.
+Document findings, technology choices, architecture decisions, and proposed approaches.
+
+M1.2 — System Architecture
+Create overall system architecture diagram.
+Define agent responsibilities: Query Understanding Agent, Retrieval Agent, Response Generation Agent, Clarification Agent, and Conversation Memory Agent.
+Design agent orchestration and information flow.
+Define document, chunk, embedding, query, retrieval result, and response schemas.
+Define data flow from document upload - text extraction - chunking - embedding - vector store - retrieval - response generation.
+
+M1.3 — Knowledge Base Ingestion Module
+Build knowledge base document upload interface/module.
+Support PDF, DOCX, TXT, and CSV file formats.
+Implement document text extraction and basic text cleaning/normalization.
+Define and implement document chunking strategy with appropriate chunk size and overlap.
+Generate embeddings for document chunks.
+Implement vector store indexing with document and chunk metadata.
+Validate successful ingestion and indexing across all supported file formats.
+
+M1.4 — RAG Retrieval Pipeline & Validation
+Build a basic RAG retrieval pipeline using the indexed knowledge base.
+Implement semantic search to retrieve the most relevant document chunks for a user query.
+Test retrieval using sample knowledge base documents across two different domains.
+Create factual, procedural, comparative, and unavailable-information test queries.
+Evaluate Top-1, Top-3, and Top-5 retrieval accuracy and identify low-relevance results.
+Document retrieval performance, limitations, and proposed improvements for Milestone 2.
+
+To help with the system architecture design, you can use and modify this:
+User Interface / Knowledge Base Management
+Backend / API Layer
+Document Upload & Storage
+Document Processing & Text Extraction Module
+Document / Knowledge Base Metadata Database
+Knowledge Base Ingestion Pipeline
+Data Cleaning & Chunking Module
+Embedding Generation Module
+Vector Database / Semantic Search
+RAG Retrieval Pipeline
+AI Agent Layer - Query Understanding Agent, Retrieval Agent, Response Generation Agent, Clarification Agent, Conversation Memory Agent
+Multi-Agent Orchestrator
+LLM / Foundation Model
+Response & Citation Generation Module
+Confidence & Retrieval Transparency Module
+Voice Input / Speech-to-Text Module (Web Speech API)
+Text-to-Speech / Voice Response Module (Web Speech API)
+Results / Response Interface
+Query Analytics & Knowledge Gap Detection Module
+Knowledge Base Update Module
+Communication / Data Flow between Components
+As we progress with next milestones details, you can update the architecture.
+
+
+*OVERVIEW OF THE PROJECT*
+
+Finding answers inside large collections of documents is slow, and general-purpose LLMs can hallucinate when 
+they lack domain context. This platform solves that by combining:
+
+~ Document ingestion: load, clean and chunk source documents.
+
+~ Embeddings and semantic search: index chunks as vectors so queries match on meaning, not just keywords.
+
+~ Multi-agent query resolution: specialised agents cooperate to interpret the question, retrieve evidence, and compose a grounded answer.
+
+~ Voice interface: ask questions by speaking and hear the answer back.
+
+Key Features
+
+Multi-agent pipeline with separate responsibilities (routing, retrieval, answer generation, voice I/O)
+Semantic retrieval over embedded document chunks
+Retrieval-augmented answers grounded in your documents, with source references
+Voice input and output (speech-to-text and text-to-speech)
+Modular ingestion so new document sets can be added without changing agent code
+Persistent storage for embeddings and metadata
+
+
+
+# **M1.1 — Research & Technical Understanding**
+
+### **1. RAG Architecture**
+
+Retrieval-Augmented Generation (RAG) combines document retrieval with AI response generation. It retrieves relevant information from a knowledge base before generating answers.
+
+**Pipeline:** Document Upload → Text Extraction → Chunking → Embeddings → Vector Database → Semantic Retrieval → Response Generation.
+
+### **2. Multi-Agent Query Resolution**
+
+A multi-agent system uses specialized agents coordinated by an orchestration layer.
+
+**Five proposed agents:**
+
+- **Query Understanding Agent:** Understands user intent.
+- **Retrieval Agent:** Finds relevant document information.
+- **Response Generation Agent:** Generates context-based answers.
+- **Clarification Agent:** Resolves ambiguous queries.
+- **Conversation Memory Agent:** Maintains conversation context.
+
+### **3. Embeddings and Vector Search**
+
+- **Embeddings:** Convert text into numerical vectors.
+- **Semantic Similarity:** Measures meaning similarity between texts.
+- **Chunking:** Divides documents into smaller text segments.
+- **Vector Search:** Retrieves relevant chunks based on embedding similarity.
+
+### **4. Web Speech API**
+
+The Web Speech API provides browser-based voice interaction:
+
+- Speech Recognition converts speech into text.
+- Speech Synthesis converts text into spoken audio.
+
+### **5. Technology Choices**
+
+- Python and FastAPI — Backend
+- Sentence Transformers — Text embeddings
+- ChromaDB — Vector storage and search
+- HTML, CSS, JavaScript — Frontend
+- Web Speech API — Voice interaction
+
+# **M1.2 — Overall System Architecture Diagram**
+
+The following architecture separates the **document ingestion pipeline**, **RAG retrieval pipeline**, and **five-agent orchestration layer**.
+
+## Component responsibilities
+
+| Component                 | Responsibility                      |
+| ------------------------- | ----------------------------------- |
+| Frontend                  | Upload documents and accept queries |
+| FastAPI                   | Handle API requests                 |
+| Ingestion pipeline        | Extract, clean and chunk documents  |
+| Embedding model           | Convert text into vectors           |
+| ChromaDB                  | Store and retrieve vectors          |
+| Query Understanding Agent | Analyze user intent                 |
+| Clarification Agent       | Resolve ambiguous queries           |
+| Retrieval Agent           | Retrieve relevant chunks            |
+| Response Generation Agent | Generate grounded answers           |
+| Conversation Memory Agent | Maintain conversation context       |
+| Orchestration Layer       | Coordinate agent execution          |
+| Web Speech API            | Enable voice interaction            |
+
+

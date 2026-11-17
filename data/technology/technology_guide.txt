@@ -1,0 +1,16 @@
+﻿TECHNOLOGY KNOWLEDGE GUIDE
+
+Programming:
+Programming languages allow developers to create software applications. Python is commonly used for automation, data analysis, artificial intelligence, and backend development.
+
+Databases:
+Databases store and organize information so applications can retrieve and update it efficiently. Relational databases use tables, rows, and columns. SQL is commonly used to query relational databases.
+
+Cloud Computing:
+Cloud computing provides computing resources such as servers, storage, and databases over the internet. It allows organizations to scale resources without maintaining all physical infrastructure themselves.
+
+Cybersecurity:
+Cybersecurity protects computers, networks, and data from unauthorized access and digital attacks. Common security practices include strong passwords, multi-factor authentication, encryption, and regular software updates.
+
+Artificial Intelligence:
+Artificial intelligence enables computer systems to perform tasks that typically require human intelligence. Machine learning is a branch of AI that identifies patterns in data and uses them to make predictions.

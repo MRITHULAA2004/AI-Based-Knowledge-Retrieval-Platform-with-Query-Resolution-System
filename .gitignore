@@ -1,5 +1,24 @@
+# Python environment
 .venv/
+venv/
 __pycache__/
 *.pyc
-database/chroma_db/
+
+# Environment variables and secrets
 .env
+.env.*
+
+# Vector database
+database/chroma_db/
+
+# Temporary files
+~$*
+*.tmp
+*.log
+write_test.txt
+
+# Uploaded documents
+data/uploads/
+
+# Backup files
+database/vector_store_backup.py
